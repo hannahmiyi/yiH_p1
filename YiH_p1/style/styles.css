@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+}
+@font-face{
+    font-family:"helvetica";
+    src:url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("woff"),
+    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("opentype"),
+    url("https://candyfonts.com/wp-data/2018/10/26/11538/HELR45W.ttf") format("truetype");
+}
+h1 {
+font-family: Helvetica, sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 40.4808px;
+line-height: 160.02%;
+}
+/*navigation styles*/
+label{
+    display: none;
+}
+#nav-button{
+    display:none;
+  }
+.navbar{
+    width:100%;
+    align-items:center;
+    flex: content;
+}
+
+/*styling logo*/
+.navbar .logo{
+    margin: 0 20px;
+}
+/*styling icon bar*/
+.icon-bar{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+/*styling each icon in icon bar*/
+.icon-bar a{
+    text-align:center;
+    padding:20px 30px;
+    text-decoration:none;
+    font-family: Helvetica, sans-serif;
+    color: black;
+
+}
+/*styling about*/
+.icon-bar .about a{
+    text-align:center;
+    padding:40px 80px;
+    text-decoration:none;
+    outline-style:solid;
+
+}
+/*styling contact*/
+.icon-bar .right a{
+    text-align:right;
+    padding:20px 30px;
+    text-decoration:none;
+    display:flex;
+
+}
+.right{
+    display:flex;
+}
+/*header styles*/
+.hero{
+    background-image: url(https://uploads-ssl.webflow.com/60aefa326f1c7583dad5d450/60b48ddcd0d9183393bdd563_5-Merani-Street_.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:70vh;
+
+}
+
+.hero-headline{
+    margin:0;
+    color:black;
+}
+
+.hero-inner{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+button, .style-one{
+    background-color:#5D5349;
+    font-family:Helvetica, sans-serif;
+    font-weight: bolder;
+    color:white;
+    padding:10px;
+}
+/*section styles*/
+/*ABOUT*/
+section .about{
+    padding-top:10%;
+}
+content{
+    padding: 10%;
+}
+p, .red{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160.02%;
+    /* or 48px */
+    color: #9D3A3A
+}
+.mask-group{
+    display:flex;
+}
+/* This will effect everything from 0 to 576px */
+
+
+
+/* Media Queries */
+@media (min-width: 576px) /* for mobile */{}
+@media (min-width:768px) /* for tablets */{}
+@media (min-width: 992px) /* for laptops */{}
+@media (min-width: 1200px) /* for large devices */{}
+
+
+@media only screen and(max-width:768px){
+    .navbar{
+        align-items: center;
+    }
+.navbar {
+    position:absolute;
+    top:34px;
+    right: 0;
+    width:100%;
+    background:#dcdcdc;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow:hidden;
+    transition:all 1s ease-in-out;
+}
+.icon-bar a{
+    display:block;
+    width:100%;
+    padding:5px;   
+}
+label{
+    display:block;
+    padding:0px 10px;
+    font-size:30px;
+    cursor:pointer;
+  }
+  
+  label:hover{
+    color:#575757;
+  }
+  #nav-button:checked ~ .iconbar{
+    max-height:540px;
+    transition: all 1s ease-in-out;
+}
+nav a:hover{
+    background:darkpurple;
+  }
+}
